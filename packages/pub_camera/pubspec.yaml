@@ -19,7 +19,7 @@ dependencies:
   get: ^3.26.0
   rxdart: ^0.26.0
   stop_watch_timer: ^1.0.0
-  path_provider: ^1.1.0
+  path_provider: ^2.0.1
   chewie: ^1.0.0
   flutter_image_compress: ^0.7.0
   video_compress: ^2.1.0
