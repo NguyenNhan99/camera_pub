@@ -27,7 +27,7 @@ class CameraScreen extends StatefulWidget {
 }
 
 class _CameraScreenState extends State<CameraScreen> {
-  List<CameraDescription> cameras;
+  List cameras;
   String timestamp() => DateTime.now().millisecondsSinceEpoch.toString();
   final BehaviorSubject<bool> visibilityController =
   BehaviorSubject<bool>.seeded(false);
@@ -121,20 +121,19 @@ class _CameraScreenState extends State<CameraScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return GetMaterialApp(
-        home: Scaffold(
-          body: SafeArea(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.stretch,
-              children: <Widget>[
-                Expanded(
-                  flex: 1,
-                  child: _cameraPreviewWidget(context),
-                ),
-              ],
+    return Scaffold(
+      body: SafeArea(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: <Widget>[
+            Expanded(
+              flex: 1,
+              child: _cameraPreviewWidget(context),
             ),
-          ),
-        ));
+          ],
+        ),
+      ),
+    );
   }
 
   Widget _cameraPreviewWidget(context) {
